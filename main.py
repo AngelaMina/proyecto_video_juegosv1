@@ -17,7 +17,6 @@ df_reviews_sentiment = pd.read_csv("df_reviews_sentimentv1.csv", sep=',', encodi
 df_items_money = pd.read_csv("df_items_moneyv1.csv", sep=',', encoding='utf-8-sig')
 df_items_time = pd.read_csv("df_items_timev1.csv", sep=',', encoding='utf-8-sig')
 df_items_top = pd.read_csv("df_items_topv1.csv", sep=',', encoding='utf-8-sig')
-df_games_api = pd.read_csv("df_games_apiv1.csv", sep=',', encoding='utf-8-sig')
 
 
 app = FastAPI()
@@ -226,6 +225,7 @@ def sentiment_analysis(ano: int):
 
 
 def recomendacion_usuario(id_usuario): #tipo de dato?
+    df_games_api = pd.read_csv("df_games_apiv1.csv", sep=',', encoding='utf-8-sig')
 
     #Se crea una matriz de Usuario item
     user_item_matrix = df_games_api.pivot_table(index='user_id_reviews', columns='item_name', values='sentiment_analysis', fill_value=0)
