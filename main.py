@@ -8,7 +8,7 @@ from sklearn.metrics.pairwise import cosine_similarity
 
 #Cargamos los archivos necesarios 
 
-df_games_money = pd.read_csv("df_games_moneyv1.v1", sep=',', encoding='utf-8-sig')
+df_games_money = pd.read_csv("df_games_moneyv1.csv", sep=',', encoding='utf-8-sig')
 df_games_top = pd.read_csv("df_games_topv1.csv", sep=',', encoding='utf-8-sig')
 df_games_ano = pd.read_csv("df_games_anov1.csv", sep=',', encoding='utf-8-sig')
 df_games_sentiment = pd.read_csv("df_games_sentimentv1.csv", sep=',', encoding='utf-8-sig')
